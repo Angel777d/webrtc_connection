@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>WebRTC</title>
+
+</head>
+
+<body>
+<p>Some http file</p>
+<button id="callButton">Call</button>
+<button id="helloButton">Hello!</button>
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="module">
+    import Client from "./client.js";
+
+    const socket = io.connect('', {port: 8080});
+    const client = new Client(socket);
+</script>
+
+</body>
+</html>
